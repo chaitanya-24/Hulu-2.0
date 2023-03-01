@@ -16,6 +16,7 @@ const Thumbnail = forwardRef(({ result }, ref) => {
           `${BASE_URL}${result.backdrop_path || result.poster_path}` ||
           `${result.poster_path}`
         }
+        alt=""
         height={1080}
         width={1920}
       />
@@ -33,5 +34,7 @@ const Thumbnail = forwardRef(({ result }, ref) => {
     </div>
   );
 });
+
+Thumbnail.displayName = 'Thumbnail';
 
 export default Thumbnail;
