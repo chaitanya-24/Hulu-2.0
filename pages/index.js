@@ -30,9 +30,12 @@ export async function getServerSideProps(context) {
     }`
   ).then((res) => res.json());
 
+
+  const results = request.results || [];
+
   return {
     props: {
-      results: request.results,
+      results,
     }
   }
 }
